@@ -1,0 +1,120 @@
+{% extends '7userproductview.html' %}
+
+{% block content %}
+<style>
+    @media (max-width: 600px) {
+        input{
+            width: 100% !important;
+        }
+    }
+    input{
+        width: 25% !important;
+    }
+</style>
+
+<section class="main-banner container" id="#top">
+    <div class="">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="row p-img-div">
+                    <img src="{{ product.image.url }}" alt="" class="p-s-img" id="ProPurImage">
+                </div>
+                <!-- <div class="row subimgs-row">
+                    <img src="{{ product.image.url }}" alt="">
+                    <img src="{{ product.image.url }}" alt="">
+                    <img src="{{ product.image.url }}" alt="">
+                    <img src="{{ product.image.url }}" alt="">
+                </div> -->
+            </div>
+            <div class="col-md-6 ">
+                <div class="p-img-details">
+                    <h3 class="ms-2 text-capitalize">{{product.product_types}} {{product.product_category}} {{product.product_name}}</h3>
+                    <p class="ms-2 mt-2">₹ {{ product.product_price }}</p>
+                </div>
+                <div class=" p-detail p-4">
+                    
+                    <div class="i-size">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <!-- Quantity input -->
+                             {{form}}
+                            
+                            <!-- Color selection -->
+                            <label for="product_color">Color:</label>
+                            <select id="product_color" name="product_color" class="form-select w-50 text-uppercase">
+                                {% for color in product.footwearimages_set.all %}
+                                    <option value="{{ color.id }}" name="color_id" class="text-uppercase">{{ color.product_color }}</option>
+                                {% endfor %}
+                            </select>
+                            <!-- Size selection -->
+                            <label for="size">Size:</label>
+                            <select id="size" name="size" class="form-select w-50">
+                                {% for size in product.footwearsize_set.all %}
+                                    <option value="{{ size.id }}" name="size_id">{{ size.size }}</option>
+                                {% endfor %}
+                            </select>
+                            
+                            <button type="submit" class="buy-btn btn mt-3">Buy Now</button>
+                        </form>
+                        <div class="cart-buy-btn row mt-3 flex-wrap justify-content-center">
+                            
+                            <div class="mb-3 mt-3 w-100">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Product Details
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{product.product_description}}</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Shipping & Returns
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <!-- <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

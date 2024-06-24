@@ -1,0 +1,246 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static './assets/images/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Volant</title>
+
+ 
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="{% static './assets/css/additional.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/lightbox.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .plus{
+            transition: all 0.4s ease-in-out;
+        }
+        .plus:hover{
+            transform: scale(1.2);
+        }
+    </style>
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>   -->
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->    
+    <header class="header-area header-sticky  container-fluid">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="{% static './assets/images/volantlogo-01.png' %}" width="150px" alt="Volant-logo">
+                        </a>
+
+                        <ul class="nav">
+                            <!-- <li class="scroll-to-section"><a href="#tindex.html" class="">Home</a></li> -->
+                            <li class="submenu scroll-to-section" >
+                                <a href="javascript:;" >Site Overview</a>
+                                <ul>
+                                    <li><a href="{% url 'adminpage' %}">Users</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;" class="active">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'add_pro' %}">Add Products</a></li>
+                                    <li><a href="{% url 'adminproducts' %}">Update Products</a></li>
+                                    <li><a href="{% url 'adminproducts' %}">Delete Products</a></li>
+                                    <li><a href="{% url 'adminproducts' %}">Add New launches </a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Orders</a>
+                                <ul>
+                                    <li><a href="{% url 'adminorderlist' %}">View Orders</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Offers</a>
+                                <ul>
+                                    <li><a href="">Add offerse</a></li>
+                                    <li><a href="">Edit offerse</a></li>
+                                    <li><a href="">Delete offerse</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="submenu ">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">User</a>
+                                <ul>
+                                    <li><a href="">{{request.user}}</a></li>
+                                    <li><a href="{% url 'logout' %}">logout</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <!-- <li class="submenu ">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li> -->
+                            <li class=" ">
+                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-user"></i></a>
+                            </li>
+                        </ul>        
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{request.user}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to logout?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+          <a href="{% url 'logout' %}" type="button" class="btn btn-outline-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ***** Header Area End ***** -->
+
+    <section  class="main-banner container  " id="top">
+        {% block content %}
+        <section>
+            <div class="container">
+                <div class="col-lg-12 justify-content-center py-4">
+                    <a href="{% url 'add_pro' %}" class="text-black-50">
+                    <h3 class="text-center plus"><i class="fa-solid fa-plus"></i></h3>
+                    <h3 class="text-center">Add Products</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {% for i in products %}
+            <div class="col mb-2">
+                <a href="{% url 'update_pro' i.id %}" class="">
+                <div class="card pcards h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{i.image.url}}"alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-1">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <p class="p-name">{{i.product_types}} {{ i.product_category }} <span>{{ i.product_name }}</span> </p>
+                            <!-- Product price-->
+                            <p class="p-price"> ₹ {{ i.product_price }} </p>
+                            <a href="{% url 'admindelepeproduct' i.id %}"><i class="fa-solid fa-trash-can text-danger"></i></a>
+                            <!-- ₹319 -->
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!-- add next cards  -->
+            {% endfor %}
+            
+        </div>
+        {% endblock %}
+    </section>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="{% static './assets/js/jquery-2.1.0.min.js    ' %}        "></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static './assets/js/popper.js              ' %}        "></script>
+    <script src="{% static './assets/js/bootstrap.min.js          ' %}     "></script>
+
+    <!-- Plugins -->
+    <script src="{% static './assets/js/owl-carousel.js     ' %}           "></script>
+    <script src="{% static './assets/js/accordions.js              ' %}    "></script>
+    <script src="{% static './assets/js/datepicker.js              ' %}    "></script>
+    <script src="{% static './assets/js/scrollreveal.min.js          ' %}  "></script>
+    <script src="{% static './assets/js/waypoints.min.js          ' %}     "></script>
+    <script src="{% static './assets/js/jquery.counterup.min.js' %}        "></script>
+    <script src="{% static './assets/js/imgfix.min.js          ' %}        "></script> 
+    <script src="{% static './assets/js/slick.js              ' %}         "></script> 
+    <script src="{% static './assets/js/lightbox.js              ' %}      "></script> 
+    <script src="{% static './assets/js/isotope.js              ' %}       "></script> 
+    <script src="{% static './assets/js/quantity.js              ' %}      "></script>
+    
+    <!-- Global Init -->
+    <script src="{% static './assets/js/custom.js              ' %}        "></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>

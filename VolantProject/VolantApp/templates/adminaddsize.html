@@ -1,0 +1,28 @@
+{% extends 'adminproducts.html' %}
+
+{% block content %}
+{{product}}
+<h4 class="text-capitalize text-center">{{product.product_types}} {{product.product_category}} {{product.product_name}}</h4>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-outline-dark mt-3">Save</button>
+</form>
+<section>
+    <div class="row">
+        <h4 class="text-center text-black-50 py-4">Available sizes</h4>
+        <table class="table table-stripped">
+            <tr>
+                <td>Size</td>
+                <td>action</td>
+            </tr>
+            {% for i in sizes %}
+            <tr>
+                <td>{{i.size}}</td>
+                <td><a href="" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>
+{% endblock  %}

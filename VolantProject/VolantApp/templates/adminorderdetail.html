@@ -1,0 +1,42 @@
+{% extends 'adminorders.html' %}
+
+{% block content %}
+
+
+<section class="main-banner min-vh-100 container" id="top">
+    <div class="row pb-5">
+        All users :- 
+    </div>
+    <div class="row">
+        <div class="col-12">
+                <table class="table table-bordered  table-hover ">
+                    <thead class="">
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Product</th>
+                            <th>Color</th>
+                            <th>Quantity</th>
+                            <th>Total Priceb</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>{{order.id}}</td>
+                                <td>{{order.user.username}}</td>
+                                <td>{{order.product.product_name}}</td>
+                                <td><img src="{{order.color.product_image.url}}" width="100px" alt=""></td>
+                                <td>{{order.quantity}}</td>
+                                <td>{{order.total}}</td>
+                                <td>{{order.status}}</td>
+                                <td><a href="{% url 'adminorderupdate' order.id %}" class="btn btn-outline-success">Update</a></td>
+                                <!-- <td><a href="" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">View</a></td> -->
+                            </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

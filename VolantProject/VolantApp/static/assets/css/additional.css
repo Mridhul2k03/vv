@@ -1,0 +1,323 @@
+.explore-video{
+    display: flex; 
+    align-items: center;
+    align-content: center;
+ }
+ .explore-video video{
+     width: 100%;
+ 
+ }
+ .explore-video .col-12{
+     overflow: hidden;
+     padding: 0;
+     transition: all 0.5s ease-in-out;
+ }
+ .explore-video video{
+     transition: all 0.5s ease-in-out;
+ }
+ .explore-video video:hover{
+     transform: scale(1.2);
+     
+ }
+ .explore-video .col-12:hover{
+     border-radius: 1.1rem ;
+     
+ }
+ #explore .first-image{
+     transition: all 0.5s ease-in-out;
+ 
+ }
+ #explore .first-image:hover{
+     transform: translateX(5px);
+ }
+ #explore .second-image{
+     transition: all 0.5s ease-in-out;
+ }
+ #explore .second-image:hover{
+     transform: translateX(-5px);
+ }
+ .si-img{
+     transition: all 0.5s ease-in-out;
+ }
+ .si-img:hover{
+     transform: translateX(5px);
+ }
+ ::-webkit-scrollbar{
+     display: none;
+     scroll-behavior: smooth;
+ }
+ /* .fa-star{
+  color: gold;
+ } */
+ 
+ 
+ .pcards{
+     transition: all 0.4s ease-in-out;
+     color: black;
+ }
+ .pcards:hover{
+     box-shadow: 0 0 20px gray;
+ }
+ .op-2{
+     width: 50%;
+ }
+ .pcul,.pc{
+     padding-left: 1rem;
+ }
+ .pcli{
+     border-bottom: 1px solid rgba(73, 73, 73, 0.126);
+     font-size: 1rem;
+     padding-block: .6rem;
+ }
+ .pcli:hover{
+     color: red;
+ }
+ 
+ .p-img{
+     width: 80%;
+ }
+ .square-box{
+     border:1px solid black;
+ }
+ .btn-checks-size{
+     width: 40px;
+     height: 40px;
+     background-color: white;
+     border: 2px solid black;
+     border-radius: 50%;
+     transition: all 0.3s ease-in-out;
+ }
+ .btn-checks-size:hover{
+     width: 40px;
+     height: 40px;
+     background-color: rgb(0, 0, 0);
+     border: 1px solid black;
+     color: white;
+     border-radius: 50%;
+ }
+ .btn-checks-size:focus{
+     background-color: black;
+     color: white;
+ }
+ .btn-checks-color{
+     width: 90px;
+     height: 60px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 10px;
+ }
+ .btn-checks-color:focus{
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.616);
+     
+ }
+ .m-t-h1,.m-t-h2,.m-t-h3{
+     text-align: center;
+     
+ }
+ 
+ .p-detail{
+     background-color: rgba(216, 216, 216, 0.721);
+     height: auto;
+ }
+ .i-color{
+     padding: 1rem;
+     background-color: rgba(210, 210, 210, 0.66);
+ }
+ .i-color:hover{
+     background-color: rgb(210, 210, 210);
+ }
+ .i-size{
+     padding: 1rem;
+ }
+ .i-size:hover{
+     background-color: rgb(210, 210, 210);
+ }
+ 
+ 
+ .p-c-options{
+     border-radius: 0;
+ }
+ .p-c-options:focus{
+     /* box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.779); */
+     border: black ;
+ }
+ 
+ /* .p-c-options:hover{
+     box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.779);
+     border: black;
+ } */
+ 
+ .p-s-options{
+     border-radius: 0;
+ }
+ .p-s-options:focus{
+     /* box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.779);
+     border: black; */
+ }
+ /* .p-s-options:hover{
+     box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.779);
+     border: black;
+ } */
+ 
+ .p-c-options options:hover{
+     background-color: rgb(198, 198, 198);
+ }
+ 
+ .btn-size-chart{
+     border-radius: 0;
+     transition: all 0.3s ease-in-out;
+ }
+ .btn-size-chart:hover{
+     transform: translateY(-6px);
+     
+ }
+ .p-img-div{
+     display: flex;
+     justify-content: end;
+     overflow: hidden;
+     
+ }
+ .p-sub-img-cols{
+     justify-content: space-around;
+ }
+ .p-sub-image{
+     width: 15%;
+     object-fit: cover;
+ }
+ 
+ .p-s-img{
+     width: 110%;
+ 
+ }
+ .p-s-img:hover{
+     
+     transition: transform .2s; /* Animation */
+     cursor: zoom-in;
+     
+     &:hover {
+         transform: scale(1.6); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+     }
+ }
+ .p-c-img{
+     width: 90%;
+ }
+ @media(max-width:992px){
+     .p-img-div{
+         justify-content: center;
+     }
+     .p-s-img{
+         width: 100%;
+     }
+     .p-img-details{
+         padding-block: 2rem;
+     }
+     }
+ 
+ /* .accordion-item{
+     border: 0;
+ }
+ .acc-btn{
+     border: 0;
+     border-bottom: 1px solid black;
+     border-radius: 0;
+     box-shadow: none;
+     background-color: white;
+ }
+ .acc-btn:focus{
+     box-shadow: none;
+     border: 0;
+     background-color: white;
+     border-bottom: 1px solid black;
+ }
+ .acc-btn::before{
+     border: 0;
+     border-bottom: 1px solid black;
+     border-radius: 0;
+     box-shadow: none;
+     background-color: white;
+ } */
+ 
+ .by-btn{
+     background-color: rgb(177, 177, 177);
+     outline: 1px solid black;
+     border-radius: 0;
+ 
+ }
+ .by-btn:hover{
+     background-color: rgb(0, 0, 0);
+     outline: none;
+     color: white;
+ }
+ .acc-btn::after{
+     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg>');
+ }
+ .acc-btn:not(.collapsed)::after {
+     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>');
+ }
+ /* .acc-btn::content{
+     background-color: white;
+     border: 0;
+     border-bottom: 1px solid black;
+ } */
+ .cart-buy-btn{
+     display: flex;
+ }
+ .subimgs-row{
+     display: flex;
+     justify-content: space-evenly;
+ }
+ .subimgs-row img{
+     width:23%;
+     object-fit: cover;
+     margin-top: 1rem;
+     cursor: pointer;
+ }
+ .subimgs-row img:hover{
+     filter: grayscale(30%) blur(2px);
+ }
+ .subimgs-row img:focus{
+     box-shadow: 5px 5px 12px gray;
+ }
+ 
+ @media (max-width:992px){
+     .op-2{
+         width: 100%;
+         margin-top: 1rem;
+     }
+     .op-1{
+         margin-top: 1rem;
+     }
+     .main-banner{
+         width: 95%;
+     }
+ 
+ }
+ 
+ .p-name{
+     font-size: .75rem;
+     font-weight: 400;
+ }
+ .p-name span{
+     font-size: .75rem;
+     font-weight: 700;
+ }
+ .p-price{
+     font-size: .9rem;
+     font-weight: 500;
+ }
+ .whatsapp-btn{
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     width: 60px;
+     height: 60px;
+     background-color: #25d366;
+     color: #fff;
+     border-radius: 50%;
+     text-align: center;
+     line-height: 60px;
+     font-size: 24px;
+     cursor: pointer;
+     z-index: 1000;
+   }

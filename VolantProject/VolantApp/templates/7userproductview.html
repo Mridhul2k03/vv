@@ -1,0 +1,815 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static './assets/images/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Volant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="{% static './assets/css/additional.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/lightbox.css' %}">
+
+    <style>
+        .btn-checks-sizes {
+            color: black;
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s ease-in-out;
+            background-color: white;
+        }
+        .btn-checks-sizes:hover {
+            background-color: black;
+            color: white;
+        }
+        .btn-checks-sizes:focus{
+            background-color: black;
+            color: white;
+        }
+        .buy-btn{
+            border: 1px solid black;
+        }
+        .buy-btn:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    
+    </head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>   -->
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+     {% block nav %}
+    <header class="header-area header-sticky container-fluid">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="{% url 'user_index' %}" class="logo">
+                            <img src="{% static './assets/images/volantlogo-01.png' %}" width="150px" alt="Volant-logo">
+                        </a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'user_index' %}" >Home</a></li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Gents</a>
+                                <ul>
+                                    <li><a href="{% url 'usergentsview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Slipper and Flip Flops</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Flat Shoes</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Casual Shoes</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Special Collections</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Ladies</a>
+                                <ul>
+                                    <li><a href="{% url 'userladiesview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Slipper and Flip Flops</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Flat shoes</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Casual Shoes</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Women Special Collections</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Boys &amp; Girls</a>
+                                <ul>
+                                    <li><a href="{% url 'userbgview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'userbgview' %}">Shoes </a></li>
+                                    <li><a href="{% url 'userbgview' %}">School editions</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Kid's</a>
+                                <ul>
+                                    <li><a href="{% url 'userkidsview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'userkidsview' %}">Shoes</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu ">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="{% url 'userabout' %}">About Us</a></li>
+                                    <li><a href="{% url 'usercontact' %}">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class=" ">
+                                <a href="javascript:;"><i class="fa-solid fa-bag-shopping"></i></i></a>
+                            </li>
+                            <li class=" ">
+                                <a href="{% url 'list' %}"><i class="fa fa-shopping-cart"></i></a>
+                            </li>
+                            <li class=" ">
+                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-user"></i></a>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{request.user}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to logout?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+          <a href="{% url 'logout' %}" type="button" class="btn btn-outline-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ***** Header Area End ***** -->
+    {% endblock nav %}
+    <!-- ***** Header Area End ***** -->
+{% block content %}
+    <section class="main-banner container" id="#top">
+        <div class="">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="row p-img-div">
+                        <img src="{{ products.image.url }}" alt="" class="p-s-img" id="ProPurImage">
+                    </div>
+                    <!-- <div class="row subimgs-row">
+                        <img src="{{ products.image.url }}" alt="">
+                        <img src="{{ products.image.url }}" alt="">
+                        <img src="{{ products.image.url }}" alt="">
+                        <img src="{{ products.image.url }}" alt="">
+                    </div> -->
+                </div>
+                <div class="col-md-6 ">
+                    <div class="p-img-details">
+                        <h3 class="ms-2"> Gents SANADALS {{products.product_name}}</h3>
+                        <p class="ms-2 mt-2">₹ {{ products.product_price }}</p>
+                        <a type="button" class="btn w-50 text-start mt-3  btn-size-chart" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Volant Size chart
+                        </a>
+                    </div>
+                    <div class=" p-detail p-4">
+                        <div class="i-color">
+                            
+                            <h5 class="mb-3">Colours : <span class="fs-6 fw-bold" id="changeColorName">{{ products.product_color }}</span></h5>
+                            {% for i in pro %}
+                            <button onclick="changeImage('{{ i.product_image.url }}'),changeName('{{ i.product_color }}')"
+                                class="btn btn-checks-color "
+                                style="background-image: url('{{ i.product_image.url }}');"></button>
+                            {% endfor %}
+                        </div>
+                        <div class="i-size">
+
+                            <!-- Modal -->
+                            <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog" style="max-width: 80%;">
+                                    <div class="modal-content">
+                                        <div class="modal-header justify-content-center">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Volant Size Chart</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <table class="table table-bordered">
+                                                {%  if products.product_types == 'gents' %}
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">SIZE / UK</td>
+                                                        <td rowspan="2" class="m-t-h2 align-middle">EU</td>
+                                                        <td class="m-t-h3 align-center" colspan="2">FOOT LENGTH</td>
+                                                    <tr>
+                                                        <td class="m-t-h4 text-center">cm</td>
+                                                        <td class="m-t-h4 text-center">inch</td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>40</td>
+                                                        <td>24.2 - 24.9</td>
+                                                        <td>9.5 - 9.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>41</td>
+                                                        <td>25 - 25.7</td>
+                                                        <td>9.8 - 10.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>42</td>
+                                                        <td>25.8 - 26.5</td>
+                                                        <td>10.2 - 10.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>43</td>
+                                                        <td>26.6 - 27.3</td>
+                                                        <td>10.5 - 10.7</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>44/45</td>
+                                                        <td>27.4 - 28.1</td>
+                                                        <td>10.8 - 11.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>46</td>
+                                                        <td>28.2 - 28.9</td>
+                                                        <td>11.1 - 11.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>47</td>
+                                                        <td>29 - 29.7</td>
+                                                        <td>11.4 - 11.7</td>
+                                                    </tr>
+                                                </tbody>
+                                                {% elif products.product_types == 'ladies' %}
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">SIZE / UK</td>
+                                                        <td rowspan="2" class="m-t-h2 align-middle">EU</td>
+                                                        <td class="m-t-h3 align-center" colspan="2">FOOT LENGTH</td>
+                                                    <tr>
+                                                        <td class="m-t-h4 text-center">cm</td>
+                                                        <td class="m-t-h4 text-center">inch</td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>36</td>
+                                                        <td>22.8 - 23.5</td>
+                                                        <td>9 - 9.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>37</td>
+                                                        <td>23.6 - 24.3</td>
+                                                        <td>9.5 - 9.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>38</td>
+                                                        <td>24.4 - 25.1</td>
+                                                        <td>9.6 - 9.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>39/40</td>
+                                                        <td>25.2 - 25.9</td>
+                                                        <td>9.9 - 10.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>41</td>
+                                                        <td>26 - 26.7</td>
+                                                        <td>10.2 - 10.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>42</td>
+                                                        <td>26.8 - 27.5</td>
+                                                        <td>10.6 - 10.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>43</td>
+                                                        <td>27.6 - 28.3</td>
+                                                        <td>10.9 - 11.1</td>
+                                                    </tr>
+                                                </tbody>
+                                                {% elif products.product_types == 'boys' %}
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">CATEGORY</td>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">SIZE / UK</td>
+                                                        <td rowspan="2" class="m-t-h2 align-middle">EU</td>
+                                                        <td class="m-t-h3 align-center" colspan="2">FOOT LENGTH</td>
+                                                    <tr>
+                                                        <td class="m-t-h4 text-center">cm</td>
+                                                        <td class="m-t-h4 text-center">inch</td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>BOYS</td>
+                                                        <td>1</td>
+                                                        <td>33</td>
+                                                        <td>20.2 - 20.9</td>
+                                                        <td>8 - 8.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>BOYS</td>
+                                                        <td>2</td>
+                                                        <td>34</td>
+                                                        <td>21 - 21.7</td>
+                                                        <td>8.3 - 8.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>BOYS</td>
+                                                        <td>3</td>
+                                                        <td>35/36</td>
+                                                        <td>21.8 - 22.5</td>
+                                                        <td>8.6 - 8.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>BOYS</td>
+                                                        <td>4</td>
+                                                        <td>37</td>
+                                                        <td>22.6 - 23.3</td>
+                                                        <td>8.9 - 9.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>BOYS</td>
+                                                        <td>5</td>
+                                                        <td>38</td>
+                                                        <td>23.4 - 24.1</td>
+                                                        <td>9.2 - 9.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR BOYS</td>
+                                                        <td>6</td>
+                                                        <td>40</td>
+                                                        <td>24.2 - 24.9</td>
+                                                        <td>9.5 - 9.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR BOYS</td>
+                                                        <td>7</td>
+                                                        <td>41</td>
+                                                        <td>25 - 25.7</td>
+                                                        <td>9.8 - 10.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR BOYS</td>
+                                                        <td>8</td>
+                                                        <td>42</td>
+                                                        <td>25.8 - 26.5</td>
+                                                        <td>10.2 - 10.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR BOYS</td>
+                                                        <td>9</td>
+                                                        <td>43</td>
+                                                        <td>26.6 - 27.3</td>
+                                                        <td>10.5 - 10.7</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR BOYS</td>
+                                                        <td>10</td>
+                                                        <td>44/45</td>
+                                                        <td>27.4 - 28.1</td>
+                                                        <td>10.8 - 11.1</td>
+                                                    </tr>
+                                                </tbody>
+                                                {% elif products.product_types == 'girls' %}
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">CATEGORY</td>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">SIZE / UK</td>
+                                                        <td rowspan="2" class="m-t-h2 align-middle">EU</td>
+                                                        <td class="m-t-h3 align-center" colspan="2">FOOT LENGTH</td>
+                                                    <tr>
+                                                        <td class="m-t-h4 text-center">cm</td>
+                                                        <td class="m-t-h4 text-center">inch</td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>GIRLS</td>
+                                                        <td>1</td>
+                                                        <td>31</td>
+                                                        <td>19.6 - 20.3</td>
+                                                        <td>7.7 - 8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>GIRLS</td>
+                                                        <td>2</td>
+                                                        <td>32</td>
+                                                        <td>20.4 - 21.1</td>
+                                                        <td>8 - 8.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>GIRLS</td>
+                                                        <td>3</td>
+                                                        <td>33</td>
+                                                        <td>21.2 - 21.9</td>
+                                                        <td>8.3 - 8.6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>GIRLS</td>
+                                                        <td>4</td>
+                                                        <td>34/35</td>
+                                                        <td>22 - 22.7</td>
+                                                        <td>8.7 - 8.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR GIRLS</td>
+                                                        <td>5</td>
+                                                        <td>36</td>
+                                                        <td>22.8 - 23.5</td>
+                                                        <td>9 - 9.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR GIRLS</td>
+                                                        <td>6</td>
+                                                        <td>37</td>
+                                                        <td>23.6 - 24.3</td>
+                                                        <td>9.3 - 9.6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR GIRLS</td>
+                                                        <td>7</td>
+                                                        <td>38</td>
+                                                        <td>24.4 - 25.1</td>
+                                                        <td>9.6 - 9.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR GIRLS</td>
+                                                        <td>8</td>
+                                                        <td>39/40</td>
+                                                        <td>25.2 - 25.9</td>
+                                                        <td>9.9 - 10.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SENIOR GIRLS</td>
+                                                        <td>9</td>
+                                                        <td>41</td>
+                                                        <td>26 - 26.7</td>
+                                                        <td>10.2 - 10.5</td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                                {% elif products.product_types == 'kids' %}
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">CATEGORY</td>
+                                                        <td rowspan="2" class="m-t-h1 align-middle">SIZE / UK</td>
+                                                        <td rowspan="2" class="m-t-h2 align-middle">EU</td>
+                                                        <td class="m-t-h3 align-center" colspan="2">FOOT LENGTH</td>
+                                                        <td rowspan="2" class="m-t-h3 align-middle" >AGE</td>
+                                                    <tr>
+                                                        <td class="m-t-h4 text-center">cm</td>
+                                                        <td class="m-t-h4 text-center">inch</td>
+                                                    </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KIDS</td>
+                                                        <td>8</td>
+                                                        <td>25/26</td>
+                                                        <td>15.2 - 15.9</td>
+                                                        <td>6 - 6.3</td>
+                                                        <td>3.0 - 3.6 Years</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KIDS</td>
+                                                        <td>9</td>
+                                                        <td>27</td>
+                                                        <td>16.0 - 16.7</td>
+                                                        <td>6.3 - 6.6</td>
+                                                        <td>3.6 - 4.6 Years</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KIDS</td>
+                                                        <td>10</td>
+                                                        <td>28</td>
+                                                        <td>16.8 - 17.5</td>
+                                                        <td>6.6 - 6.9</td>
+                                                        <td>4.6 - 5.6 Years</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KIDS</td>
+                                                        <td>11</td>
+                                                        <td>29</td>
+                                                        <td>17.6 - 18.3</td>
+                                                        <td>6.9 - 7.2</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KIDS</td>
+                                                        <td>12</td>
+                                                        <td>30/31</td>
+                                                        <td>18.4 - 19.1</td>
+                                                        <td>7.2 - 7.5</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KIDS</td>
+                                                        <td>13</td>
+                                                        <td>32</td>
+                                                        <td>19.2 - 19.9</td>
+                                                        <td>7.5 - 7.8</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                                {% endif %}
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- modal -->
+
+                            <h5 class="mb-4">Size</h5>
+                        {% if size %}
+                            {% for i in size %}
+                                    <button class="btn btn-checks-sizes">{{i.size}}</button>
+                            {% endfor %}
+                        {% else %}
+                            <h5 class="text-danger">Product Not available</h5>
+                        {% endif %}
+                            
+                            <div class="cart-buy-btn row mt-3 flex-wrap justify-content-center">
+                                <div class="col-sm-2">
+                                    <input type="number" value="1" name="quantity" id="quantity"
+                                        class="form-control float-start mt-3 ">
+                                </div>
+                                <div class="col-sm-5">
+                                    <a href="{% url 'buy_view' products.id %}" class="w-100 float-start mt-3 btn buy-btn">Buy now</a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="{% url 'addtocart' products.id %}" class="w-100 float-start mt-3 btn buy-btn"><i
+                                            class="fa fa-shopping-cart"></i></a>
+
+                                </div>
+                                <div class="mb-3 mt-3 w-100">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Product Details
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">{{products.product_description}}</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Shipping & Returns
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    accordion body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <!-- <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                          </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <div class="row pt-5">
+                <h3>Related Products</h3>
+            </div>
+            <div class="row pt-5">
+                <div class="row  gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for i in related %}
+                    <div class="col mb-2">
+                        <a href="{% url 'userdetail' i.id %}" class="">
+                            <div class="card pcards h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="{{i.image.url}}" alt="..." />
+                                <!-- Product details-->
+                                <div class="card-body p-1">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <p class="p-name">{{i.product_types}} {{ i.product_category }} <span>{{i.product_name }}</span> </p>
+                                        <!-- Product price-->
+                                        <p class="p-price"> ₹ {{ i.product_price }} </p>
+                                        <!-- ₹319 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- add next cards  -->
+                    <!-- add next cards  -->
+                     {% endfor %}
+            </div>
+        </section>
+    </section>
+    {% endblock %}
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- <h4>Useful Links</h4> -->
+                    <ul>
+                        <li><a href="{% url 'user_index' %}">Home</a></li>
+                        <li><a href="{% url 'usergentsview' %}">Gents</a></li>
+                        <li><a href="{% url 'userladiesview' %}">Ladies</a></li>
+                        <li><a href="{% url 'userbgview' %}">Boys & Girls</a></li>
+                        <li><a href="{% url 'userkidsview' %}">Kids</a></li>
+                        <li><a href="{% url 'userabout' %}">About Us</a></li>
+                        <li><a href="{% url 'usercontact' %}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <!-- <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul> -->
+                </div>
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="{% static './assets/images/logowhite-01.png' %}" width="160px" alt=" 
+                            VOLANT SHOES PVT.LTD
+                            ">
+                        </div>
+                        <ul>
+                            <li><a href="#"> VOLANT SHOES PVT.LTD</a></li>
+                            <li><a href="#">10/391 , Kakkanchery , Chelembra (P.O),Malappuaram , 673634
+                                </a></li>
+                            <li><a href="mailto:volantshoes@gmail.com" class="">volantshoes@gmail.com
+                                </a></li>
+                            <li><a href="www.volantfootwear.com" class="">www.volantfootwear.com
+                                </a></li>
+                            <li><a href="#">PH : +918589883308
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Gent’s Shopping</a></li>
+                        <li><a href="#">Ladie’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                        <li><a href="#">Boys &amp; Girls Shopping</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright &COPY; 2024 Volant. All Rights Reserved.
+                            <br><a href="{% url 'privacy' %}">Privacy & Policy ,</a><a href="{% url 'terms' %}">Terms & Conditions</a></p>
+
+                            <!-- <br>Design: <a href="" target="_parent" title="free css templates">TemplateMo</a></p> -->
+                        <ul>
+                            <li><a href="https://www.facebook.com/volantfootwears"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/volantfootwears/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li><a href="https://www.youtube.com/channel/UCWa6KAsmNRNhB5nE8eLfCLg"><i
+                                        class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="https://x.com/volantfootwears"><i class="bi bi-twitter-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function changeImage(imageUrl) {
+            var image = document.getElementById('ProPurImage');
+            image.src = imageUrl;
+        }
+        function changeName(name) {
+            var content = document.getElementById('changeColorName');
+            content.innerHTML = name;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script> <!-- jQuery -->
+    <script src="{% static './assets/js/jquery-2.1.0.min.js    ' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static './assets/js/popper.js              ' %}"></script>
+    <script src="{% static './assets/js/bootstrap.min.js       ' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static './assets/js/owl-carousel.js        ' %}"></script>
+    <script src="{% static './assets/js/accordions.js          ' %}"></script>
+    <script src="{% static './assets/js/datepicker.js          ' %}"></script>
+    <script src="{% static './assets/js/scrollreveal.min.js    ' %}"></script>
+    <script src="{% static './assets/js/waypoints.min.js       ' %}"></script>
+    <script src="{% static './assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static './assets/js/imgfix.min.js          ' %}"></script>
+    <script src="{% static './assets/js/slick.js               ' %}"></script>
+    <script src="{% static './assets/js/lightbox.js            ' %}"></script>
+    <script src="{% static './assets/js/isotope.js             ' %}"></script>
+    <script src="{% static './assets/js/quantity.js            ' %}"></script>
+
+    <!-- Global Init -->
+    <script src="{% static './assets/js/custom.js              ' %}"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

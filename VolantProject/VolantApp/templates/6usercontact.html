@@ -1,0 +1,410 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static './assets/images/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Volant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="{% static './assets/css/additional.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static './assets/css/lightbox.css' %}">
+
+    
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>   -->
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->    
+    <header class="header-area header-sticky container-fluid">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="{% url 'landinghome' %}" class="logo">
+                            <img src="{% static './assets/images/volantlogo-01.png' %}" width="150px" alt="Volant-logo">
+                        </a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'user_index' %}" class="">Home</a></li>
+                            <li class="submenu scroll-to-section" >
+                                <a href="javascript:;">Gents</a>
+                                <ul>
+                                    <li><a href="{% url 'usergentsview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Slipper and Flip Flops</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Flat Shoes</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Casual Shoes</a></li>
+                                    <li><a href="{% url 'usergentsview' %}">Special Collections</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Ladies</a>
+                                <ul>
+                                    <li><a href="{% url 'userladiesview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Slipper and Flip Flops</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Flat shoes</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Casual Shoes</a></li>
+                                    <li><a href="{% url 'userladiesview' %}">Women Special Collections</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Boys &amp; Girls</a>
+                                <ul>
+                                    <li><a href="{% url 'userbgview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'userbgview' %}">Shoes </a></li>
+                                    <li><a href="{% url 'userbgview' %}">School editions</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu scroll-to-section">
+                                <a href="javascript:;">Kid's</a>
+                                <ul>
+                                    <li><a href="{% url 'userkidsview' %}">Sandels</a></li>
+                                    <li><a href="{% url 'userkidsview' %}">Shoes</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu ">
+                                <a href="javascript:;" class="active">Pages</a>
+                                <ul>
+                                    <li><a href="{% url 'userabout' %}">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class=" ">
+                                <a href="{% url 'userorderlist' %}"><i class="fa-solid fa-bag-shopping"></i></i></a>
+                            </li>
+                            <li class=" ">
+                                <a href="{% url 'list' %}"><i class="fa fa-shopping-cart"></i></a>
+                            </li>
+                            <li class=" ">
+                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-user"></i></a>
+                            </li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{request.user}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to logout?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+          <a href="{% url 'logout' %}" type="button" class="btn btn-outline-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Contact Us</h2>
+                        <span>“Every Step Tells a Story”</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Contact Area Starts ***** -->
+    <div class="contact-us">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-6">
+                    <div id="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.144092725519!2d75.86197607355797!3d11.176965251681032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6507a7bbeecd3%3A0x1d5130c925a11998!2sexmedia!5e0!3m2!1sen!2sin!4v1717572639801!5m2!1sen!2sin" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>                      
+                    </div>
+                </div> -->
+                <div class="col-lg-6 align-content-center justify-content-center align-items-center d-flex">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Contact Details
+                            </h3>
+                            <ul>
+                                <li class="py-4"><i class="fa fa-map-marker"></i> <br><span class="pb-3">10/391 , Kakkanchery , Chelembra (P.O),Malappuaram , 673634, Kerala, INDIA</span></li>
+                                <li class="py-4"><i class="fa fa-phone"></i><br><span class="pb-3">+91 85898 83308</span></li>
+                                <li class="py-4"><i class="fa fa-envelope"></i><br><span class="pb-3">volantshoes@gmail.com</span></li>
+                                <li class="py-4"><i class="fa fa-globe"></i><br><span class="pb-3">www.volantfootwear.com</span></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="col-6">
+                            <ul>
+                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>Email:<br><span>info@company.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>For Business details:-</h2>
+                        <span></span>
+                    </div>
+                    <form id="contact" action="" method="post">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <fieldset>
+                                <label class="mt-0" for="">Name</label>
+                              <input name="name"  type="text" id="name" placeholder="Your name" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-12">
+                            <fieldset>
+                                <label class="mt-4" for="">Email</label>
+                              <input name="email"  type="text" id="email" placeholder="Your email" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-12">
+                            <fieldset>
+                                <label class="mt-4" for="">Phone</label>
+                              <input name="phne"  type="text" id="phone" placeholder="Your Phone" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-12">
+                            <fieldset>
+                                <label class="mt-4" for="">Message</label>
+                              <textarea name="message" rows="6" id="message" placeholder="Your message" required="" class="mt-0"></textarea>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-12">
+                            <fieldset>
+                              <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Contact Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.461954515998!2d75.88824102359078!3d11.15339213908046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6516a024f7351%3A0x250e6b32957347c4!2sVolant%20Shoes%20PVT%20Limited!5e0!3m2!1sen!2sin!4v1717575422854!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
+                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    </div>
+                    <form id="subscribe" action="" method="get">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-2">
+                            <fieldset>
+                              <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                            </fieldset>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        
+                        <div class="col-6">
+                            <ul>
+                                <li>Store Location:<br><span>10/391 , Kakkanchery , Chelembra (P.O),Malappuaram , 673634</span></li>
+                                <li>Phone:<br><span>010-020-0340</span></li>
+                                <li>Office Location:<br><span>North Miami Beach</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>Email:<br><span>info@company.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- ***** Subscribe Area Ends ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- <h4>Useful Links</h4> -->
+                    <ul>
+                        <li><a href="{% url 'user_index' %}">Home</a></li>
+                        <li><a href="{% url 'usergentsview' %}">Gents</a></li>
+                        <li><a href="{% url 'userladiesview' %}">Ladies</a></li>
+                        <li><a href="{% url 'userbgview' %}">Boys & Girls</a></li>
+                        <li><a href="{% url 'userkidsview' %}">Kids</a></li>
+                        <li><a href="{% url 'userabout' %}">About Us</a></li>
+                        <li><a href="javascript:;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <!-- <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul> -->
+                </div>
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="{% static './assets/images/logowhite-01.png' %}" width="160px" alt=" 
+                            VOLANT SHOES PVT.LTD
+                            ">
+                        </div>
+                        <ul>
+                            <li><a href="#"> VOLANT SHOES PVT.LTD</a></li>
+                            <li><a href="#">10/391 , Kakkanchery , Chelembra (P.O),Malappuaram , 673634
+                            </a></li>
+                            <li><a href="mailto:volantshoes@gmail.com" class="">volantshoes@gmail.com  
+                                </a></li>
+                            <li><a href="www.volantfootwear.com" class="">www.volantfootwear.com
+                                </a></li>
+                            <li><a href="#">PH : +918589883308
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Gent’s Shopping</a></li>
+                        <li><a href="#">Ladie’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                        <li><a href="#">Boys &amp; Girls Shopping</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright &COPY; 2024 Volant. All Rights Reserved. 
+                            <br><a href="{% url 'privacy' %} ">Privacy & Policy ,</a><a href="{% url 'terms' %} ">Terms & Conditions</a></p>
+                        <!-- <br>Design: <a href="" target="_parent" title="free css templates">TemplateMo</a></p> -->
+                        <ul>
+                            <li><a href="https://www.facebook.com/volantfootwears"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/volantfootwears/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCWa6KAsmNRNhB5nE8eLfCLg"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="https://x.com/volantfootwears"><i class="bi bi-twitter-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="{% static './assets/js/jquery-2.1.0.min.js    ' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static './assets/js/popper.js              ' %}"></script>
+    <script src="{% static './assets/js/bootstrap.min.js       ' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static './assets/js/owl-carousel.js        ' %}"></script>
+    <script src="{% static './assets/js/accordions.js          ' %}"></script>
+    <script src="{% static './assets/js/datepicker.js          ' %}"></script>
+    <script src="{% static './assets/js/scrollreveal.min.js    ' %}"></script>
+    <script src="{% static './assets/js/waypoints.min.js       ' %}"></script>
+    <script src="{% static './assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static './assets/js/imgfix.min.js          ' %}"></script> 
+    <script src="{% static './assets/js/slick.js               ' %}"></script> 
+    <script src="{% static './assets/js/lightbox.js            ' %}"></script> 
+    <script src="{% static './assets/js/isotope.js             ' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static './assets/js/custom.js              ' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,13 @@
+{% extends 'adminorders.html' %}
+
+{% block content %}
+
+<section class="main-banner min-vh-100 container" id="top">
+    <form action="" method="POST" >
+        {% csrf_token %}
+        {{form}}
+        <button class="btn btn-outline-dark mt-3" type="submit">Update</button>
+    </form>
+</section> 
+
+{% endblock %}

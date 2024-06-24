@@ -1,0 +1,9 @@
+{% extends 'adminproducts.html' %}
+
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-outline-dark mt-3">Add</button>
+</form>
+{% endblock  %}

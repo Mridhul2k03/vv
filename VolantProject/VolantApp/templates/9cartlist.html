@@ -1,0 +1,44 @@
+{% extends '7userproductview.html' %}
+
+{% block content %}
+<section class="main-banner container" id="#top"></section>
+<div class="container">
+  <h2>Cart List</h2>
+  <table class="table table-responsive-sm">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Product</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+        {% for i in products %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td class="text-capitalize">{{i.product.product_types}} {{i.product.product_category}} {{i.product.product_name}}</td>
+        <td><img src="{{i.color.product_image.url}}" alt="" width="100px"></td>
+        <td>{{i.size.size}}</td>
+        <td>{{i.product.product_price}}</td>
+        <td>{{i.quantity}}</td>
+        <td>{{i.total}}</td>
+        <td><a href="{% url 'cart_remove' i.id %}" class="btn btn-danger me-2">Remove</a><a href="" class="btn btn-success">Buy Now</a> </td>
+      </tr>
+        {% endfor %}
+        
+      <tr>
+        <td colspan="3" class="text-right">Total : </td>
+        <td>{{sum}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+{% endblock %}
